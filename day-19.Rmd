@@ -1,0 +1,10 @@
+---
+title: "day-19"
+output: html_document
+---
+
+The "Whole Game Image" begins with **All data**, which is split into **Training** and **Testing** sets. This split is important to make sure that the modeling performance is evaluated on data it hasn't seen before. The **Training** data is used to build the model, while the **Testing** data is held back for final performance verification. Then, we have **Resamples** which are used to create multiple subsets of the training data. This helps us estimate model performance more reliably. We then fit several candidate models like **Log Reg**, **Decision Trees**, and **Random Forests** on these resamples. Each model is evaluated and then one is selected during the **Select a Model** section.
+
+Once the model is selected, we move to the **Final Model Fit** section, where that model is trained on the entire training dataset. The final model is then tested on the previously untouched **Testing** data to **Verify Model Performance**. This step is very important because it gives a honest estimate of how the model is likely to perform on new, real-world data.
+
+A common problem here is peeking at the test data too early in the process, which can bias the results. Overall, this workflow helps us ensure that our model is ready for deployment.
